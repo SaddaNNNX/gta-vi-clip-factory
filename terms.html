@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- ===== SEO básico ===== -->
+  <title>Termos de Serviço — GTA VI Clip Factory</title>
+  <meta name="description" content="Termos de Serviço do GTA VI Clip Factory, aplicativo desktop para Windows que auxilia na criação de clipes de gameplay, com integração opcional ao TikTok pela API oficial.">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#0c0614">
+  <link rel="canonical" href="https://saddannnx.github.io/gta-vi-clip-factory/terms.html">
+
+  <!-- ===== Open Graph ===== -->
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:site_name" content="GTA VI Clip Factory">
+  <meta property="og:title" content="Termos de Serviço — GTA VI Clip Factory">
+  <meta property="og:description" content="Condições de uso do aplicativo GTA VI Clip Factory para Windows.">
+  <meta property="og:url" content="https://saddannnx.github.io/gta-vi-clip-factory/terms.html">
+
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%23ff4fa3'/%3E%3Cstop offset='1' stop-color='%23ff8a3d'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='32' height='32' rx='8' fill='url(%23g)'/%3E%3Cpath d='M13 10l9 6-9 6z' fill='%231a0614'/%3E%3C/svg%3E">
+  <script>document.documentElement.classList.add('js');</script>
+
+  <style>
+    /* =========================================================
+       1. TOKENS DE DESIGN (iguais em todas as páginas)
+       ========================================================= */
+    :root {
+      --bg: #0c0614; --bg-2: #140a1f; --surface: #1b1028; --line: #36244a;
+      --text: #fff4f8; --body: #e4d9ec; --muted: #b9a9c9;
+      --accent: #ff4fa3; --accent-ink: #1a0614; --accent-soft: rgba(255, 79, 163, .10);
+      --warn: #ffd166; --radius: 16px; --max: 1140px;
+      --font: "Segoe UI Variable", "Segoe UI", Inter, system-ui, -apple-system, Roboto, "Helvetica Neue", Arial, sans-serif;
+      --mono: ui-monospace, "Cascadia Code", "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+    }
+
+    /* =========================================================
+       2. BASE
+       ========================================================= */
+    *, *::before, *::after { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { margin: 0; background: var(--bg); color: var(--text); font-family: var(--font); line-height: 1.7; -webkit-font-smoothing: antialiased; }
+    a { color: var(--accent); }
+    a:hover { text-decoration-thickness: 2px; }
+    :focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 4px; }
+    .wrap { max-width: var(--max); margin: 0 auto; padding: 0 20px; }
+    .skip { position: absolute; left: -999px; top: 8px; z-index: 100; background: var(--accent); color: var(--accent-ink); padding: 8px 14px; border-radius: 8px; font-weight: 700; }
+    .skip:focus { left: 12px; }
+
+    /* =========================================================
+       3. CABEÇALHO E NAVEGAÇÃO
+       ========================================================= */
+    .site-header { position: sticky; top: 0; z-index: 50; background: rgba(12, 6, 20, .82); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border-bottom: 1px solid var(--line); }
+    .nav { display: flex; align-items: center; justify-content: space-between; height: 64px; gap: 16px; }
+    .brand { display: flex; align-items: center; gap: 10px; color: var(--text); text-decoration: none; font-weight: 800; line-height: 1.1; }
+    .brand-mark { width: 32px; height: 32px; border-radius: 9px; background: var(--accent); color: var(--accent-ink); display: grid; place-items: center; flex-shrink: 0; }
+    .brand small { display: block; font-size: .64rem; color: var(--muted); font-weight: 600; letter-spacing: .16em; text-transform: uppercase; }
+    .nav-links { display: flex; gap: 2px; list-style: none; margin: 0; padding: 0; }
+    .nav-links a { display: block; color: var(--muted); text-decoration: none; padding: 8px 12px; border-radius: 10px; font-size: .92rem; font-weight: 600; }
+    .nav-links a:hover, .nav-links a[aria-current="page"] { color: var(--text); background: var(--surface); }
+    .nav-toggle { display: none; align-items: center; justify-content: center; width: 42px; height: 42px; border-radius: 10px; background: var(--surface); border: 1px solid var(--line); color: var(--text); cursor: pointer; }
+    @media (max-width: 760px) {
+      .nav-toggle { display: inline-flex; }
+      .nav-links { display: none; position: absolute; top: 64px; left: 0; right: 0; flex-direction: column; padding: 10px 16px 18px; background: var(--bg-2); border-bottom: 1px solid var(--line); }
+      .nav-links.open { display: flex; }
+      .nav-links a { padding: 12px; }
+    }
+
+    /* =========================================================
+       4. LAYOUT DOS DOCUMENTOS LEGAIS
+       ========================================================= */
+    .eyebrow { display: inline-flex; align-items: center; gap: 10px; font-family: var(--mono); font-size: .76rem; letter-spacing: .14em; text-transform: uppercase; color: var(--accent); }
+    .eyebrow::before { content: ""; width: 8px; height: 8px; border-radius: 50%; background: var(--accent); box-shadow: 0 0 12px var(--accent); }
+    .legal-hero { position: relative; padding: 64px 0 40px; border-bottom: 1px solid var(--line); overflow: hidden; }
+    .legal-hero::after { content: ""; position: absolute; width: 520px; height: 520px; right: -180px; top: -280px; background: radial-gradient(circle, rgba(255,79,163,.14), transparent 62%); pointer-events: none; }
+    .legal-hero h1 { font-size: clamp(2rem, 5vw, 3.4rem); line-height: 1.05; letter-spacing: -.03em; margin: 16px 0 14px; }
+    .meta { display: flex; flex-wrap: wrap; gap: 8px; list-style: none; padding: 0; margin: 0; }
+    .meta li { font-family: var(--mono); font-size: .76rem; color: var(--muted); border: 1px solid var(--line); background: var(--surface); padding: 5px 12px; border-radius: 999px; }
+
+    .legal-layout { display: grid; grid-template-columns: 250px 1fr; gap: 56px; padding: 48px 20px 80px; }
+    .toc { position: sticky; top: 88px; align-self: start; font-size: .88rem; max-height: calc(100vh - 110px); overflow: auto; }
+    .toc p { font-family: var(--mono); font-size: .72rem; letter-spacing: .14em; text-transform: uppercase; color: var(--muted); margin: 0 0 12px; }
+    .toc ol { list-style: none; padding: 0; margin: 0; border-left: 1px solid var(--line); }
+    .toc a { display: block; padding: 5px 0 5px 14px; margin-left: -1px; border-left: 2px solid transparent; color: var(--muted); text-decoration: none; line-height: 1.4; }
+    .toc a:hover { color: var(--text); }
+    .toc a.active { color: var(--accent); border-left-color: var(--accent); }
+
+    .prose { max-width: 760px; min-width: 0; }
+    .prose h2 { font-size: 1.4rem; letter-spacing: -.01em; line-height: 1.25; margin: 52px 0 14px; scroll-margin-top: 88px; }
+    .prose h2:first-of-type { margin-top: 0; }
+    .prose h2 .n { font-family: var(--mono); color: var(--accent); font-size: .9rem; margin-right: 10px; }
+    .prose h3 { font-size: 1.05rem; margin: 26px 0 8px; }
+    .prose p, .prose li { color: var(--body); }
+    .prose ul { padding-left: 22px; }
+    .prose li { margin-bottom: 8px; }
+    .prose li::marker { color: var(--accent); }
+    .prose strong { color: var(--text); }
+
+    .summary { background: linear-gradient(135deg, rgba(255,79,163,.08), var(--surface) 60%); border: 1px solid var(--line); border-left: 3px solid var(--accent); border-radius: 12px; padding: 22px 24px; margin-bottom: 44px; }
+    .summary h2 { margin: 0 0 10px !important; font-size: 1.05rem !important; }
+    .summary ul { margin: 0; }
+    .pending { display: block; background: rgba(255, 207, 90, .07); color: var(--warn); border: 1px dashed rgba(255, 207, 90, .45); border-radius: 10px; padding: 10px 14px; font-size: .92rem; margin: 12px 0; }
+    .pending strong { color: var(--warn); }
+    .contact-box { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); padding: 24px; margin-top: 16px; }
+    .contact-box a { font-weight: 800; font-size: 1.1rem; word-break: break-all; }
+    .back { display: inline-block; margin-top: 44px; font-weight: 700; text-decoration: none; }
+
+    @media (max-width: 900px) {
+      .legal-layout { grid-template-columns: 1fr; gap: 28px; padding-top: 32px; }
+      .toc { position: static; max-height: none; background: var(--surface); border: 1px solid var(--line); border-radius: 12px; padding: 18px; }
+    }
+
+    /* =========================================================
+       5. RODAPÉ
+       ========================================================= */
+    .site-footer { border-top: 1px solid var(--line); background: var(--bg-2); padding: 36px 0; color: var(--muted); font-size: .88rem; }
+    .footer-links { display: flex; flex-wrap: wrap; gap: 8px 22px; list-style: none; padding: 0; margin: 0 0 18px; }
+    .footer-links a { color: var(--muted); text-decoration: none; }
+    .footer-links a:hover { color: var(--accent); }
+    .disclaimer { margin: 0; font-size: .8rem; line-height: 1.7; }
+
+
+    /* =========================================================
+       TEMA "PÔR DO SOL NEON"
+       Paleta original inspirada em fim de tarde tropical:
+       rosa, laranja, roxo e ciano sobre noite arroxeada.
+       Não usa logo, tipografia ou arte oficial de terceiros.
+       ========================================================= */
+    :root {
+      --orange: #ff8a3d;
+      --violet: #8b5cf6;
+      --cyan: #36e2f0;
+      --sunset: linear-gradient(100deg, #ff4fa3 0%, #ff6f6b 50%, #ff8a3d 100%);
+    }
+    body {
+      background:
+        radial-gradient(900px 500px at 100% -10%, rgba(139, 92, 246, .14), transparent 60%),
+        radial-gradient(700px 420px at -10% 30%, rgba(54, 226, 240, .05), transparent 60%),
+        var(--bg);
+    }
+    .brand-mark { background: var(--sunset); }
+    .eyebrow { color: var(--accent); }
+    .eyebrow::before { background: var(--sunset); box-shadow: 0 0 14px rgba(255, 79, 163, .8); }
+
+    .legal-hero::after {
+      width: 640px; height: 640px; right: -200px; top: -320px;
+      background:
+        radial-gradient(circle at 45% 55%, rgba(255, 138, 61, .18), transparent 45%),
+        radial-gradient(circle at 60% 40%, rgba(255, 79, 163, .20), transparent 62%);
+    }
+    .prose h2 .n {
+      background: var(--sunset);
+      -webkit-background-clip: text; background-clip: text;
+      color: transparent;
+    }
+    .prose li::marker { color: var(--orange); }
+    .toc a.active { color: var(--accent); border-left-color: var(--orange); }
+    .summary { border-left: 3px solid var(--accent); background: linear-gradient(135deg, rgba(255, 79, 163, .12), rgba(139, 92, 246, .08) 45%, var(--surface) 75%); }
+    .footer-links a:hover { color: var(--orange); }
+
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      *, *::before, *::after { animation: none !important; transition: none !important; }
+    }
+  </style>
+</head>
+<body>
+  <a class="skip" href="#conteudo">Pular para o conteúdo</a>
+
+  <!-- ===================== CABEÇALHO ===================== -->
+  <header class="site-header">
+    <nav class="wrap nav" aria-label="Navegação principal">
+      <a class="brand" href="index.html" aria-label="GTA VI Clip Factory — página inicial">
+        <span class="brand-mark" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"><path d="M4 8V4h4M20 8V4h-4M4 16v4h4M20 16v4h-4"/><path d="M10 9l5 3-5 3z" fill="currentColor"/></svg></span>
+        <span>GTA VI Clip Factory<small>Projeto FRENZY</small></span>
+      </a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-links" aria-label="Abrir menu">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      </button>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="index.html">Início</a></li>
+        <li><a href="terms.html" aria-current="page">Termos de Serviço</a></li>
+        <li><a href="privacy.html">Política de Privacidade</a></li>
+        <li><a href="index.html#contato">Contato</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="conteudo">
+    <header class="legal-hero">
+      <div class="wrap">
+        <span class="eyebrow">Documento legal</span>
+        <h1>Termos de Serviço</h1>
+        <ul class="meta">
+          <li>Vigência: 24 de outubro de 2026</li>
+          <li>Última atualização: 24 de outubro de 2026</li>
+          <li>Versão 1.0</li>
+        </ul>
+      </div>
+    </header>
+
+    <div class="wrap legal-layout">
+      <!-- Sumário -->
+      <nav class="toc" aria-label="Sumário dos Termos de Serviço">
+        <p>Sumário</p>
+        <ol>
+          <li><a href="#aceitacao">1. Aceitação</a></li>
+          <li><a href="#servico">2. O aplicativo</a></li>
+          <li><a href="#elegibilidade">3. Elegibilidade</a></li>
+          <li><a href="#licenca">4. Licença de uso</a></li>
+          <li><a href="#condicoes">5. Condições de utilização</a></li>
+          <li><a href="#usuario">6. Responsabilidades do usuário</a></li>
+          <li><a href="#direitos">7. Direitos autorais e PI</a></li>
+          <li><a href="#publicados">8. Vídeos publicados</a></li>
+          <li><a href="#terceiros">9. Serviços de terceiros</a></li>
+          <li><a href="#tiktok">10. API oficial do TikTok</a></li>
+          <li><a href="#disponibilidade">11. Disponibilidade e atualizações</a></li>
+          <li><a href="#garantias">12. Garantias</a></li>
+          <li><a href="#limitacao">13. Limitação de responsabilidade</a></li>
+          <li><a href="#encerramento">14. Encerramento</a></li>
+          <li><a href="#alteracoes">15. Alterações</a></li>
+          <li><a href="#lei">16. Lei aplicável</a></li>
+          <li><a href="#contato">17. Contato oficial</a></li>
+        </ol>
+      </nav>
+
+      <article class="prose">
+        <!-- Resumo em linguagem simples -->
+        <section class="summary" aria-labelledby="resumo">
+          <h2 id="resumo">Resumo em linguagem simples</h2>
+          <ul>
+            <li>O GTA VI Clip Factory é um aplicativo para Windows que analisa suas gravações de gameplay no seu computador e ajuda a criar clipes.</li>
+            <li>Você é responsável pelo conteúdo que processa e publica, incluindo o respeito a direitos autorais e às regras das plataformas.</li>
+            <li>A integração com o TikTok é opcional, usa a API oficial e só envia conteúdo quando você inicia uma publicação.</li>
+            <li>O projeto é independente e não é afiliado à Rockstar Games, à Take-Two Interactive, ao TikTok ou à ByteDance.</li>
+          </ul>
+          <p style="margin:12px 0 0;font-size:.9rem">Este resumo não substitui o texto completo abaixo.</p>
+        </section>
+
+        <h2 id="aceitacao"><span class="n">01</span>Aceitação dos termos</h2>
+        <p>Estes Termos de Serviço (“Termos”) regulam o uso do aplicativo <strong>GTA VI Clip Factory</strong> (“Aplicativo”) e deste site institucional. Ao instalar, acessar ou utilizar o Aplicativo, você declara que leu, entendeu e concorda com estes Termos e com a <a href="privacy.html">Política de Privacidade</a>. Se não concordar, não utilize o Aplicativo.</p>
+        <p>Nestes Termos, “nós” e “projeto” referem-se ao responsável pelo desenvolvimento do GTA VI Clip Factory, e “você” ou “usuário” refere-se à pessoa que utiliza o Aplicativo.</p>
+        <p class="pending"><strong>Pendente de confirmação:</strong> nome completo ou razão social do responsável pelo Aplicativo e, se houver, CNPJ/CPF e endereço para fins legais.</p>
+
+        <h2 id="servico"><span class="n">02</span>O aplicativo</h2>
+        <p>O GTA VI Clip Factory é um software desktop que funciona exclusivamente no sistema operacional <strong>Windows</strong>. Sua finalidade é:</p>
+        <ul>
+          <li>analisar gravações de gameplay armazenadas no computador do usuário;</li>
+          <li>identificar momentos potencialmente interessantes nessas gravações;</li>
+          <li>auxiliar o usuário na criação de clipes destinados a redes sociais; e</li>
+          <li>opcionalmente, permitir a publicação de clipes no TikTok por meio da API oficial do TikTok.</li>
+        </ul>
+        <p>O processamento dos vídeos é realizado localmente, no computador do usuário. A identificação de momentos é um recurso de apoio: as sugestões do Aplicativo podem não corresponder às suas expectativas, e a decisão final sobre o que recortar e publicar é sempre sua.</p>
+        <p>O projeto poderá, no futuro, passar a ser identificado pela marca <strong>FRENZY</strong>. A mudança de nome não altera, por si só, estes Termos.</p>
+
+        <h2 id="elegibilidade"><span class="n">03</span>Elegibilidade</h2>
+        <p>Para usar o Aplicativo, você deve ter capacidade legal para aceitar estes Termos ou estar devidamente assistido ou representado por seus pais ou responsáveis legais, nos termos da legislação aplicável.</p>
+        <p>Para utilizar a integração com o TikTok, você também deve atender aos requisitos de idade e às demais condições exigidas pelo próprio TikTok para manter uma conta e publicar conteúdo.</p>
+        <p>Observe também a classificação indicativa dos jogos cujas gravações você utiliza.</p>
+
+        <h2 id="licenca"><span class="n">04</span>Licença de uso</h2>
+        <p>Desde que você cumpra estes Termos, concedemos a você uma licença pessoal, limitada, revogável, não exclusiva e intransferível para instalar e utilizar o Aplicativo em computadores com Windows sob seu controle.</p>
+        <p>Você não pode, salvo quando expressamente permitido por lei ou por autorização por escrito do projeto:</p>
+        <ul>
+          <li>vender, alugar, sublicenciar ou redistribuir o Aplicativo como se fosse seu;</li>
+          <li>remover avisos de autoria, marcas ou avisos legais do Aplicativo;</li>
+          <li>usar o Aplicativo para contornar medidas técnicas de proteção de terceiros;</li>
+          <li>usar o Aplicativo de forma que viole a lei ou estes Termos.</li>
+        </ul>
+        <p class="pending"><strong>Pendente de confirmação:</strong> se o Aplicativo é gratuito ou pago, e se o código-fonte é distribuído sob alguma licença de código aberto (nesse caso, a licença de código aberto prevalece sobre esta seção no que for aplicável).</p>
+
+        <h2 id="condicoes"><span class="n">05</span>Condições de utilização</h2>
+        <ul>
+          <li>O Aplicativo deve ser utilizado apenas em computadores com Windows, de acordo com sua finalidade.</li>
+          <li>Você é responsável por manter seu computador, seu sistema operacional e sua conta de usuário do Windows em condições adequadas de segurança.</li>
+          <li>O uso da integração com o TikTok depende da sua autorização expressa e das regras do próprio TikTok.</li>
+          <li>Recomendamos manter cópias de segurança das suas gravações originais antes de processá-las.</li>
+        </ul>
+
+        <h2 id="usuario"><span class="n">06</span>Responsabilidades do usuário</h2>
+        <p>Ao usar o Aplicativo, você se compromete a:</p>
+        <ul>
+          <li>processar e publicar apenas conteúdo que você tenha o direito de usar;</li>
+          <li>respeitar direitos autorais, marcas, direitos de imagem, privacidade e demais direitos de terceiros;</li>
+          <li>cumprir os termos, políticas e diretrizes das plataformas onde publicar conteúdo, incluindo os Termos de Serviço e as Diretrizes da Comunidade do TikTok;</li>
+          <li>respeitar as políticas de conteúdo e de uso de gravações definidas pelos publicadores dos jogos que você grava;</li>
+          <li>não utilizar o Aplicativo para publicar conteúdo ilegal, ofensivo, discriminatório, enganoso, que configure spam ou que viole direitos de terceiros;</li>
+          <li>proteger o acesso ao seu computador, já que os tokens de acesso do TikTok ficam armazenados localmente nele;</li>
+          <li>revisar cada clipe antes de publicá-lo.</li>
+        </ul>
+
+        <h2 id="direitos"><span class="n">07</span>Direitos autorais e propriedade intelectual</h2>
+        <h3>7.1 Do Aplicativo</h3>
+        <p>O Aplicativo, seu nome, sua identidade visual e seus elementos originais são de titularidade do projeto ou de seus licenciantes, ressalvados os componentes de terceiros, que permanecem sujeitos às respectivas licenças.</p>
+        <h3>7.2 Do seu conteúdo</h3>
+        <p>O projeto não reivindica a propriedade das suas gravações nem dos clipes que você cria. Como o processamento é local, o projeto não recebe cópia dos seus vídeos.</p>
+        <h3>7.3 De jogos e marcas de terceiros</h3>
+        <p><strong>Grand Theft Auto</strong>, <strong>GTA</strong> e marcas, personagens, músicas e elementos relacionados pertencem aos seus respectivos titulares, como Rockstar Games e Take-Two Interactive. <strong>TikTok</strong> é marca da ByteDance Ltd. O uso desses nomes neste site e no Aplicativo é apenas descritivo e não indica afiliação, patrocínio, endosso ou aprovação.</p>
+        <p>Gravações de jogos podem conter elementos protegidos, como trilhas sonoras licenciadas. Cabe a você verificar se o uso e a publicação desse material são permitidos pelo titular dos direitos e pelas plataformas.</p>
+        <h3>7.4 Notificações de violação</h3>
+        <p>Se você acredita que algum conteúdo deste site ou do Aplicativo viola seus direitos, entre em contato pelo e-mail indicado na seção <a href="#contato">Contato oficial</a>, descrevendo o conteúdo e o direito envolvido.</p>
+
+        <h2 id="publicados"><span class="n">08</span>Responsabilidade sobre vídeos publicados</h2>
+        <p>Você é o único responsável pelos clipes que decide publicar, inclusive pelo seu conteúdo, título, legenda, hashtags, configurações de privacidade e demais informações associadas.</p>
+        <ul>
+          <li>A publicação só ocorre quando você inicia essa ação no Aplicativo.</li>
+          <li>Depois de publicado, o conteúdo passa a ser regido pelos termos e políticas da plataforma de destino. Remoção, moderação, alcance, monetização e eventuais penalidades na sua conta são decisões da plataforma, não do projeto.</li>
+          <li>Para remover um conteúdo já publicado, utilize os recursos da própria plataforma.</li>
+        </ul>
+
+        <h2 id="terceiros"><span class="n">09</span>Integrações com serviços de terceiros</h2>
+        <p>O Aplicativo pode se integrar a serviços de terceiros, como o TikTok. Esses serviços:</p>
+        <ul>
+          <li>são operados por empresas independentes do projeto;</li>
+          <li>possuem seus próprios termos de uso e políticas de privacidade, que você deve ler e aceitar diretamente com eles;</li>
+          <li>podem mudar, limitar ou encerrar suas APIs e funcionalidades a qualquer momento, o que pode afetar recursos do Aplicativo.</li>
+        </ul>
+        <p>O projeto não controla e não se responsabiliza pela disponibilidade, pelo funcionamento ou pelas práticas desses serviços.</p>
+        <p>Este site é hospedado no GitHub Pages, serviço do GitHub, Inc., sujeito aos termos e políticas do GitHub.</p>
+
+        <h2 id="tiktok"><span class="n">10</span>Uso da API oficial do TikTok</h2>
+        <ul>
+          <li><strong>Integração opcional:</strong> a conexão com o TikTok depende da sua escolha.</li>
+          <li><strong>Autorização:</strong> a conexão é feita pelo processo de autorização oficial do TikTok, no qual você decide quais permissões concede ao Aplicativo.</li>
+          <li><strong>Tokens locais:</strong> os tokens de acesso fornecidos pelo TikTok são armazenados localmente no seu computador para manter a conexão.</li>
+          <li><strong>Envio por ação do usuário:</strong> o Aplicativo só envia conteúdo ao TikTok quando você inicia uma ação de publicação.</li>
+          <li><strong>Regras do TikTok:</strong> ao usar a integração, você também concorda com os Termos de Serviço, as Diretrizes da Comunidade e demais políticas do TikTok aplicáveis.</li>
+          <li><strong>Revogação:</strong> você pode revogar o acesso do Aplicativo a qualquer momento nas configurações da sua conta TikTok. Detalhes na <a href="privacy.html#revogacao">Política de Privacidade</a>.</li>
+          <li><strong>Sem vínculo oficial:</strong> o uso da API não significa que o Aplicativo seja afiliado, endossado ou aprovado pelo TikTok ou pela ByteDance.</li>
+        </ul>
+        <p class="pending"><strong>Pendente de confirmação:</strong> lista exata de permissões (escopos) solicitadas ao TikTok e se a publicação é enviada como postagem direta ou como rascunho para finalização no aplicativo do TikTok.</p>
+
+        <h2 id="disponibilidade"><span class="n">11</span>Disponibilidade e atualizações</h2>
+        <p>O projeto pode lançar atualizações, alterar, suspender ou descontinuar funcionalidades do Aplicativo, inclusive em razão de mudanças em serviços de terceiros. Algumas funcionalidades podem depender de versões específicas do Windows ou de recursos do computador.</p>
+        <p class="pending"><strong>Pendente de confirmação:</strong> se o Aplicativo verifica atualizações automaticamente pela internet.</p>
+
+        <h2 id="garantias"><span class="n">12</span>Garantias</h2>
+        <p>Na máxima extensão permitida pela legislação aplicável, o Aplicativo é fornecido “no estado em que se encontra” e “conforme disponível”. Não garantimos que o Aplicativo estará livre de erros, que funcionará de forma ininterrupta, que identificará todos os momentos relevantes de uma gravação ou que os clipes publicados terão determinado desempenho, alcance ou aprovação nas plataformas.</p>
+        <p>Nada nestes Termos exclui garantias que não possam ser afastadas por lei, inclusive as previstas no Código de Defesa do Consumidor (Lei nº 8.078/1990), quando aplicável.</p>
+
+        <h2 id="limitacao"><span class="n">13</span>Limitação de responsabilidade</h2>
+        <p>Dentro dos limites permitidos pela legislação aplicável, o projeto não será responsável por:</p>
+        <ul>
+          <li>conteúdo criado, editado ou publicado pelo usuário e suas consequências;</li>
+          <li>violações de direitos de terceiros decorrentes do uso que o usuário fizer do Aplicativo;</li>
+          <li>decisões, falhas, indisponibilidade ou alterações de serviços de terceiros, incluindo o TikTok;</li>
+          <li>perda de arquivos decorrente de falhas de hardware, do sistema operacional, de ações do usuário ou da ausência de cópias de segurança;</li>
+          <li>acessos indevidos ao computador do usuário por terceiros, incluindo acesso a arquivos e tokens armazenados localmente;</li>
+          <li>danos indiretos, lucros cessantes ou perda de oportunidades.</li>
+        </ul>
+        <p>Essas limitações não se aplicam a casos de dolo ou culpa grave, nem afastam direitos que a legislação brasileira considera irrenunciáveis.</p>
+
+        <h2 id="encerramento"><span class="n">14</span>Encerramento do uso</h2>
+        <p>Você pode deixar de usar o Aplicativo a qualquer momento, desinstalando-o e, se tiver conectado o TikTok, revogando o acesso nas configurações da sua conta TikTok. O projeto pode encerrar a licença concedida se você violar estes Termos. As seções sobre propriedade intelectual, responsabilidade e lei aplicável continuam válidas após o encerramento.</p>
+
+        <h2 id="alteracoes"><span class="n">15</span>Alterações destes termos</h2>
+        <p>Podemos atualizar estes Termos para refletir mudanças no Aplicativo, na legislação ou em serviços de terceiros. A versão vigente estará sempre publicada nesta página, com a data da última atualização. Alterações relevantes serão destacadas neste site. O uso continuado do Aplicativo após a atualização indica concordância com a nova versão.</p>
+
+        <h2 id="lei"><span class="n">16</span>Lei aplicável e foro</h2>
+        <p>Estes Termos são regidos pelas leis da República Federativa do Brasil. Para usuários que sejam consumidores, fica assegurado o foro do seu domicílio, conforme o Código de Defesa do Consumidor. Antes de qualquer medida judicial, recomendamos o contato pelo e-mail oficial para tentar uma solução amigável.</p>
+
+        <h2 id="contato"><span class="n">17</span>Contato oficial</h2>
+        <p>Para dúvidas sobre estes Termos, suporte, notificações de direitos autorais ou qualquer outra questão:</p>
+        <div class="contact-box">
+          <a href="mailto:bxdrenan98@gmail.com">bxdrenan98@gmail.com</a>
+          <p style="margin:8px 0 0">Site: <a href="https://saddannnx.github.io/gta-vi-clip-factory/">saddannnx.github.io/gta-vi-clip-factory</a></p>
+        </div>
+
+        <a class="back" href="index.html">← Voltar para a página inicial</a>
+      </article>
+    </div>
+  </main>
+
+  <!-- ===================== RODAPÉ ===================== -->
+  <footer class="site-footer">
+    <div class="wrap">
+      <ul class="footer-links">
+        <li><a href="index.html">Início</a></li>
+        <li><a href="terms.html" aria-current="page">Termos de Serviço</a></li>
+        <li><a href="privacy.html">Política de Privacidade</a></li>
+        <li><a href="mailto:bxdrenan98@gmail.com">bxdrenan98@gmail.com</a></li>
+      </ul>
+      <p class="disclaimer">© <span data-year>2026</span> GTA VI Clip Factory. Projeto independente. Grand Theft Auto, GTA e marcas relacionadas pertencem aos seus respectivos titulares (Rockstar Games / Take-Two Interactive). TikTok é marca da ByteDance Ltd. Este projeto não é afiliado, patrocinado, endossado ou aprovado pela Rockstar Games, Take-Two Interactive, TikTok ou ByteDance.</p>
+    </div>
+  </footer>
+
+  <script>
+  /* =========================================================
+     SCRIPT DA PÁGINA — sem dependências e sem coleta de dados
+     ========================================================= */
+  (function () {
+    'use strict';
+
+    // 1. Menu móvel
+    var toggle = document.querySelector('.nav-toggle');
+    var links = document.getElementById('nav-links');
+    function closeMenu() { links.classList.remove('open'); toggle.setAttribute('aria-expanded', 'false'); toggle.setAttribute('aria-label', 'Abrir menu'); }
+    if (toggle && links) {
+      toggle.addEventListener('click', function () {
+        var open = links.classList.toggle('open');
+        toggle.setAttribute('aria-expanded', String(open));
+        toggle.setAttribute('aria-label', open ? 'Fechar menu' : 'Abrir menu');
+      });
+      links.addEventListener('click', function (e) { if (e.target.closest('a')) closeMenu(); });
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape' && links.classList.contains('open')) { closeMenu(); toggle.focus(); }
+      });
+    }
+
+    // 2. Ano atual no rodapé
+    document.querySelectorAll('[data-year]').forEach(function (el) { el.textContent = new Date().getFullYear(); });
+
+    // 3. Destaca no sumário a seção que está visível
+    var tocLinks = document.querySelectorAll('.toc a');
+    var headings = document.querySelectorAll('.prose h2[id]');
+    if ('IntersectionObserver' in window && tocLinks.length) {
+      var io = new IntersectionObserver(function (entries) {
+        entries.forEach(function (en) {
+          if (en.isIntersecting) {
+            tocLinks.forEach(function (a) { a.classList.toggle('active', a.getAttribute('href') === '#' + en.target.id); });
+          }
+        });
+      }, { rootMargin: '-80px 0px -70% 0px' });
+      headings.forEach(function (h) { io.observe(h); });
+    }
+  })();
+  </script>
+</body>
+</html>
