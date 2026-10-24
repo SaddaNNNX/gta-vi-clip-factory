@@ -210,8 +210,8 @@
           <li><a href="#processamento-local">3. Processamento local</a></li>
           <li><a href="#sem-ia">4. Sem envio a servidores ou IA externa</a></li>
           <li><a href="#dados">5. Dados envolvidos</a></li>
-          <li><a href="#tiktok">6. Integração com o TikTok</a></li>
-          <li><a href="#tokens">7. Tokens do TikTok</a></li>
+          <li><a href="#tiktok">6. TikTok e YouTube</a></li>
+          <li><a href="#tokens">7. Tokens de acesso</a></li>
           <li><a href="#finalidades">8. Finalidades e bases legais</a></li>
           <li><a href="#terceiros">9. Tratamento por terceiros</a></li>
           <li><a href="#seguranca">10. Armazenamento e segurança</a></li>
@@ -232,9 +232,10 @@
           <ul>
             <li>Seus vídeos são processados no seu próprio computador com Windows.</li>
             <li>Os vídeos não são enviados a servidores do projeto nem a serviços externos de inteligência artificial para processamento.</li>
-            <li>Se você conectar o TikTok, os tokens de acesso ficam guardados localmente no seu PC.</li>
-            <li>Um vídeo só é enviado ao TikTok, pela API oficial, quando você inicia uma publicação.</li>
-            <li>Você pode revogar o acesso do aplicativo ao TikTok a qualquer momento.</li>
+            <li>Se você conectar o TikTok ou o YouTube, os tokens de acesso ficam guardados no seu PC, criptografados pelo Windows.</li>
+            <li>Um vídeo só é enviado ao TikTok ou ao YouTube, pelas APIs oficiais, quando você inicia uma publicação.</li>
+            <li>Não há telemetria, estatísticas de uso, relatórios de erro nem verificação automática de atualizações.</li>
+            <li>Você pode desconectar e revogar o acesso do aplicativo a qualquer momento.</li>
           </ul>
           <p style="margin:12px 0 0;font-size:.9rem">Este resumo não substitui o texto completo abaixo.</p>
         </section>
@@ -242,42 +243,60 @@
         <h2 id="controlador"><span class="n">01</span>Quem é o responsável</h2>
         <p>Esta Política de Privacidade explica como o aplicativo <strong>GTA VI Clip Factory</strong> (“Aplicativo”) e este site tratam informações, em conformidade com a Lei Geral de Proteção de Dados Pessoais (Lei nº 13.709/2018 — “LGPD”).</p>
         <p>O responsável pelo projeto pode ser contatado pelo e-mail <a href="mailto:bxdrenan98@gmail.com">bxdrenan98@gmail.com</a>, que também é o canal para solicitações de privacidade.</p>
-        <p class="pending"><strong>Pendente de confirmação:</strong> nome completo ou razão social do responsável (controlador) e, se houver, CNPJ/CPF e endereço.</p>
+        <p>O controlador é <strong>Renan Santos de Lima</strong>, pessoa física, responsável pelo GTA VI Clip Factory.</p>
 
         <h2 id="escopo"><span class="n">02</span>Escopo</h2>
         <p>Esta Política se aplica:</p>
         <ul>
-          <li>ao Aplicativo GTA VI Clip Factory para Windows, incluindo sua integração opcional com o TikTok; e</li>
+          <li>ao Aplicativo GTA VI Clip Factory para Windows, incluindo suas integrações opcionais com o TikTok e o YouTube; e</li>
           <li>a este site institucional, hospedado no GitHub Pages.</li>
         </ul>
-        <p>Ela não se aplica aos serviços de terceiros, como o TikTok e o GitHub, que possuem políticas de privacidade próprias.</p>
+        <p>Ela não se aplica aos serviços de terceiros, como o TikTok, o YouTube/Google e o GitHub, que possuem políticas de privacidade próprias.</p>
 
         <h2 id="processamento-local"><span class="n">03</span>Processamento local dos vídeos</h2>
         <p>O Aplicativo funciona exclusivamente no Windows, e a análise das gravações de gameplay — incluindo a identificação de momentos interessantes e o apoio à criação de clipes — é realizada <strong>no próprio computador do usuário</strong>.</p>
         <p>As gravações originais e os clipes gerados permanecem armazenados no seu computador, nos locais que você escolher ou nos locais usados pelo Aplicativo, sob o seu controle.</p>
-        <p class="pending"><strong>Pendente de confirmação:</strong> pastas em que o Aplicativo salva clipes, arquivos temporários e configurações no Windows.</p>
+        <p>Onde o Aplicativo guarda as coisas no Windows:</p>
+        <ul>
+          <li><strong>Clipes, capas, legendas e textos:</strong> na pasta <code>Vídeos\GTA Clip Factory</code>, ou em outra pasta escolhida por você nas Configurações.</li>
+          <li><strong>Banco de dados, configurações e miniaturas:</strong> em <code>%APPDATA%\GTA VI Clip Factory</code>.</li>
+          <li><strong>Arquivos temporários</strong> (trechos de áudio e quadros usados na análise): na pasta temporária do Windows ou na escolhida nas Configurações, apagados ao fim de cada tarefa.</li>
+          <li><strong>Gravações originais:</strong> continuam onde você as salvou; o Aplicativo apenas lê esses arquivos e nunca os altera ou apaga.</li>
+        </ul>
 
         <h2 id="sem-ia"><span class="n">04</span>Sem envio a servidores próprios ou a IA externa</h2>
         <ul>
           <li>Os vídeos <strong>não são enviados a servidores do projeto</strong>.</li>
           <li>Os vídeos <strong>não são enviados a serviços externos de inteligência artificial</strong> para processamento.</li>
-          <li>A única situação em que um vídeo sai do seu computador por meio do Aplicativo é quando <strong>você inicia uma publicação no TikTok</strong> (veja a seção <a href="#tiktok">6</a>).</li>
+          <li>A transcrição de fala (Whisper) e a IA que escolhe os momentos e sugere textos (Ollama, instalado à parte) rodam no seu computador, sem internet.</li>
+          <li>A única situação em que um vídeo sai do seu computador por meio do Aplicativo é quando <strong>você inicia uma publicação no TikTok ou no YouTube</strong> (veja a seção <a href="#tiktok">6</a>).</li>
         </ul>
 
         <h2 id="dados"><span class="n">05</span>Dados envolvidos</h2>
         <h3>5.1 Vídeos e clipes</h3>
         <p>Gravações de gameplay e clipes podem conter informações pessoais, como sua voz, imagem de câmera, nome de usuário exibido em tela ou dados de outras pessoas. Esses arquivos são tratados localmente no seu computador e não são recebidos pelo projeto.</p>
-        <h3>5.2 Dados da conexão com o TikTok</h3>
-        <p>Se você conectar sua conta, o TikTok fornece ao Aplicativo tokens de acesso e as informações correspondentes às permissões que você autorizar. Esses dados ficam armazenados localmente no seu computador.</p>
-        <p class="pending"><strong>Pendente de confirmação:</strong> lista exata de permissões (escopos) solicitadas e quais dados de perfil (por exemplo, nome de exibição ou foto) o Aplicativo recebe e exibe.</p>
+        <h3>5.2 Dados da conexão com o TikTok e o YouTube</h3>
+        <p>Se você conectar suas contas, as plataformas fornecem ao Aplicativo tokens de acesso e as informações correspondentes às permissões que você autorizar. Esses dados ficam armazenados localmente no seu computador.</p>
+        <ul>
+          <li><strong>TikTok</strong> — permissões <code>user.info.basic</code>, <code>video.upload</code> e, só se você ativar “Postar direto”, <code>video.publish</code>. O Aplicativo guarda o identificador da conta (open ID) e o nome de exibição, usado só para mostrar qual conta está conectada. A foto de perfil não é guardada nem exibida. Antes de uma postagem direta, o Aplicativo consulta no TikTok o apelido e as opções de privacidade e interação permitidas para a sua conta, apenas para montar a tela de envio.</li>
+          <li><strong>YouTube</strong> — permissões <code>youtube.upload</code> e <code>youtube.readonly</code>. O Aplicativo guarda o identificador e o nome do canal, usados só para mostrar qual canal está conectado.</li>
+          <li><strong>Credenciais do aplicativo</strong> — para usar as integrações, você cadastra no Aplicativo as chaves do seu próprio app de desenvolvedor no TikTok e no Google Cloud. Elas ficam criptografadas no seu PC e nunca são enviadas ao projeto.</li>
+        </ul>
+        <p>O Aplicativo também guarda, para cada clipe enviado, o identificador e o link da publicação, a visibilidade escolhida e se a capa foi aplicada, para mostrar isso na Biblioteca.</p>
         <h3>5.3 Conteúdo que você publica</h3>
-        <p>Ao publicar, o clipe escolhido e as informações que você definir para a publicação (como legenda e configurações disponibilizadas) são enviados ao TikTok.</p>
+        <p>Ao publicar, o clipe escolhido e as informações que você definir para a publicação são enviados à plataforma escolhida:</p>
+        <ul>
+          <li><strong>TikTok, como rascunho:</strong> só o vídeo; o resto você define no aplicativo do TikTok.</li>
+          <li><strong>TikTok, postagem direta:</strong> o vídeo, a legenda, a visibilidade, as permissões de comentários/Dueto/Costura, a divulgação de conteúdo comercial e o instante do vídeo usado como capa.</li>
+          <li><strong>YouTube:</strong> o vídeo, o título, a descrição, as tags, a categoria, a visibilidade, a declaração de que não é conteúdo para crianças e a imagem de capa.</li>
+        </ul>
         <h3>5.4 Contato por e-mail</h3>
         <p>Se você nos escrever, recebemos seu endereço de e-mail e o conteúdo da mensagem, usados apenas para responder à sua solicitação.</p>
         <h3>5.5 Outras informações técnicas</h3>
-        <p class="pending"><strong>Pendente de confirmação:</strong> se o Aplicativo realiza verificação automática de atualizações, coleta relatórios de erro (crash reports), telemetria ou estatísticas de uso. Até que isso seja confirmado e descrito aqui, esta Política não declara nenhuma coleta desse tipo.</p>
+        <p>O Aplicativo <strong>não</strong> verifica atualizações automaticamente e <strong>não</strong> coleta relatórios de erro (crash reports), telemetria nem estatísticas de uso. Fora as chamadas ao TikTok e ao Google/YouTube que você inicia, a única comunicação de rede do Aplicativo é com o Ollama no endereço local do seu próprio computador (<code>127.0.0.1</code>), que não sai para a internet.</p>
 
-        <h2 id="tiktok"><span class="n">06</span>Integração com o TikTok (API oficial)</h2>
+        <h2 id="tiktok"><span class="n">06</span>Integrações com o TikTok e o YouTube (APIs oficiais)</h2>
+        <h3>6.1 TikTok</h3>
         <ul>
           <li><strong>Opcional:</strong> o uso da integração depende da sua escolha.</li>
           <li><strong>Autorização oficial:</strong> a conexão é feita pelo processo de autorização oficial do TikTok, no qual você vê e aprova as permissões solicitadas.</li>
@@ -285,22 +304,30 @@
           <li><strong>Envio somente por ação sua:</strong> o Aplicativo envia um vídeo ao TikTok <strong>apenas quando você inicia uma ação de publicação</strong>. Nenhum vídeo é publicado ou enviado automaticamente.</li>
           <li><strong>Depois do envio:</strong> o conteúdo recebido pelo TikTok passa a ser tratado de acordo com a <a href="https://www.tiktok.com/legal/privacy-policy" rel="noopener">Política de Privacidade do TikTok</a> e seus Termos de Serviço.</li>
         </ul>
-        <p>O GTA VI Clip Factory é um projeto independente e não é afiliado, patrocinado, endossado ou aprovado pelo TikTok ou pela ByteDance.</p>
+        <h3>6.2 YouTube</h3>
+        <ul>
+          <li><strong>Opcional:</strong> a conexão é feita pela tela de autorização oficial do Google, no seu navegador; o Aplicativo nunca vê a sua senha.</li>
+          <li><strong>API oficial:</strong> o envio usa a YouTube Data API v3, dos YouTube API Services.</li>
+          <li><strong>Envio somente por ação sua:</strong> o vídeo e a capa só são enviados quando você clica em enviar um clipe.</li>
+          <li><strong>Regras do YouTube e do Google:</strong> ao usar a integração, você concorda com os <a href="https://www.youtube.com/t/terms" rel="noopener">Termos de Serviço do YouTube</a>. Os dados enviados ao YouTube passam a ser tratados conforme a <a href="https://policies.google.com/privacy" rel="noopener">Política de Privacidade do Google</a>.</li>
+          <li><strong>Uso dos dados do Google:</strong> o uso de informações recebidas das APIs do Google segue a <a href="https://developers.google.com/terms/api-services-user-data-policy" rel="noopener">Política de Dados do Usuário dos Serviços de API do Google</a>. Essas informações são usadas só para enviar os seus vídeos e mostrar qual canal está conectado; não são vendidas, compartilhadas nem usadas para publicidade.</li>
+        </ul>
+        <p>O GTA VI Clip Factory é um projeto independente e não é afiliado, patrocinado, endossado ou aprovado pelo TikTok, pela ByteDance, pelo YouTube ou pelo Google.</p>
 
-        <h2 id="tokens"><span class="n">07</span>Armazenamento local dos tokens do TikTok</h2>
-        <p>Os dados de login e os tokens de acesso fornecidos pelo TikTok são <strong>armazenados localmente no seu computador</strong>, para manter a conexão ativa entre sessões e evitar que você precise autorizar novamente a cada uso.</p>
+        <h2 id="tokens"><span class="n">07</span>Armazenamento local dos tokens</h2>
+        <p>Os tokens de acesso fornecidos pelo TikTok e pelo Google/YouTube são <strong>armazenados localmente no seu computador</strong>, para manter a conexão ativa entre sessões e evitar que você precise autorizar novamente a cada uso.</p>
         <ul>
           <li>Esses tokens não são enviados a servidores do projeto.</li>
-          <li>Eles são usados apenas para que o Aplicativo se comunique com a API do TikTok em seu nome, quando você solicita.</li>
+          <li>Eles são usados apenas para que o Aplicativo se comunique com as APIs do TikTok e do YouTube em seu nome, quando você solicita.</li>
           <li>Qualquer pessoa com acesso ao seu usuário do Windows pode, em tese, ter acesso aos arquivos do Aplicativo. Proteja seu computador com senha e evite usar o Aplicativo em computadores compartilhados.</li>
         </ul>
-        <p class="pending"><strong>Pendente de confirmação:</strong> local exato e forma de armazenamento dos tokens no Windows, e se há algum mecanismo de proteção adicional aplicado a eles.</p>
+        <p>Local e proteção: os tokens e as chaves do seu app de desenvolvedor ficam nas pastas <code>%APPDATA%\GTA VI Clip Factory\tiktok</code> e <code>%APPDATA%\GTA VI Clip Factory\youtube</code>, <strong>criptografados pelo próprio Windows</strong> (proteção de dados do Windows, DPAPI, vinculada ao seu usuário). Se a criptografia do sistema não estiver disponível, o Aplicativo se recusa a guardar o login. Os tokens ficam só no processo principal do Aplicativo e nunca são exibidos na tela.</p>
 
         <h2 id="finalidades"><span class="n">08</span>Finalidades e bases legais</h2>
         <ul>
           <li><strong>Processar vídeos e gerar clipes</strong> — realizado localmente, para fornecer a funcionalidade que você solicita.</li>
-          <li><strong>Conectar e manter a conexão com o TikTok</strong> — com base na sua autorização e para executar a funcionalidade solicitada (art. 7º, I e V, da LGPD).</li>
-          <li><strong>Publicar um clipe no TikTok</strong> — somente quando você solicita, para executar a ação pedida (art. 7º, V, da LGPD).</li>
+          <li><strong>Conectar e manter a conexão com o TikTok e o YouTube</strong> — com base na sua autorização e para executar a funcionalidade solicitada (art. 7º, I e V, da LGPD).</li>
+          <li><strong>Publicar um clipe no TikTok ou no YouTube</strong> — somente quando você solicita, para executar a ação pedida (art. 7º, V, da LGPD).</li>
           <li><strong>Responder a contatos por e-mail</strong> — para atender à sua solicitação e, quando aplicável, cumprir obrigações legais (art. 7º, II, V e IX, da LGPD).</li>
         </ul>
         <p>O projeto não vende dados pessoais e não utiliza seus vídeos para publicidade.</p>
@@ -309,6 +336,7 @@
         <p>Alguns serviços de terceiros podem tratar dados relacionados ao uso do Aplicativo ou do site, cada um conforme sua própria política:</p>
         <ul>
           <li><strong>TikTok</strong> — recebe o conteúdo que você decide publicar e processa sua autorização de acesso. Pode tratar dados em outros países. <a href="https://www.tiktok.com/legal/privacy-policy" rel="noopener">Política de Privacidade do TikTok</a>.</li>
+          <li><strong>YouTube / Google</strong> — recebe os vídeos e capas que você decide enviar e processa sua autorização de acesso. Pode tratar dados em outros países. <a href="https://policies.google.com/privacy?hl=pt-BR" rel="noopener">Política de Privacidade do Google</a>.</li>
           <li><strong>GitHub (GitHub Pages)</strong> — hospeda este site e pode registrar dados técnicos de acesso, como endereço IP. <a href="https://docs.github.com/pt/site-policy/privacy-policies/github-general-privacy-statement" rel="noopener">Declaração de Privacidade do GitHub</a>.</li>
           <li><strong>Google (Gmail)</strong> — provedor do e-mail de contato; trata as mensagens que você enviar a esse endereço. <a href="https://policies.google.com/privacy?hl=pt-BR" rel="noopener">Política de Privacidade do Google</a>.</li>
         </ul>
@@ -320,26 +348,28 @@
           <li>proteger sua conta do Windows com senha ou outro método de autenticação;</li>
           <li>manter o Windows e seu antivírus atualizados;</li>
           <li>não compartilhar a pasta de dados do Aplicativo;</li>
-          <li>desconectar o TikTok e revogar o acesso se o computador for compartilhado, vendido ou perdido.</li>
+          <li>desconectar o TikTok e o YouTube e revogar o acesso se o computador for compartilhado, vendido ou perdido.</li>
         </ul>
         <p>Nenhum sistema é totalmente imune a falhas. Se tomarmos conhecimento de um incidente de segurança relacionado ao Aplicativo que possa gerar risco relevante, adotaremos as medidas cabíveis previstas na LGPD.</p>
 
         <h2 id="retencao"><span class="n">11</span>Retenção e exclusão de dados</h2>
         <ul>
           <li><strong>Vídeos e clipes:</strong> ficam no seu computador pelo tempo que você quiser. Você pode excluí-los a qualquer momento pelo Windows.</li>
-          <li><strong>Tokens do TikTok:</strong> permanecem no seu computador enquanto a conexão estiver ativa. Para encerrar o acesso, revogue a permissão no TikTok (seção <a href="#revogacao">12</a>).</li>
-          <li><strong>Conteúdo publicado:</strong> permanece no TikTok até que você o exclua por lá. Excluir o clipe do seu PC não remove a publicação.</li>
+          <li><strong>Tokens do TikTok e do YouTube:</strong> permanecem no seu computador enquanto a conexão estiver ativa. O botão <strong>Desconectar</strong> da tela Publicação revoga o acesso na plataforma e apaga o token do seu PC (seção <a href="#revogacao">12</a>).</li>
+          <li><strong>Conteúdo publicado:</strong> permanece no TikTok ou no YouTube até que você o exclua por lá. Excluir o clipe do seu PC não remove a publicação.</li>
           <li><strong>E-mails:</strong> são mantidos pelo tempo necessário para atender à solicitação e cumprir eventuais obrigações legais, podendo ser excluídos a seu pedido quando não houver obrigação de mantê-los.</li>
         </ul>
-        <p class="pending"><strong>Pendente de confirmação:</strong> se o Aplicativo oferece um botão para desconectar o TikTok e apagar os tokens, e se a desinstalação remove automaticamente os tokens, configurações e arquivos temporários (ou quais pastas devem ser apagadas manualmente).</p>
+        <p><strong>Ao desinstalar:</strong> para não apagar seu trabalho sem querer, a desinstalação <strong>não</strong> remove os clipes nem o banco de dados. Para apagar tudo, desconecte as contas na tela Publicação, desinstale o Aplicativo e apague manualmente as pastas <code>%APPDATA%\GTA VI Clip Factory</code> (configurações, banco e tokens) e <code>Vídeos\GTA Clip Factory</code> (clipes). Os arquivos temporários já são apagados ao fim de cada tarefa.</p>
 
         <h2 id="revogacao"><span class="n">12</span>Revogação de permissões</h2>
         <p>Você pode retirar a autorização concedida ao Aplicativo a qualquer momento:</p>
         <ul>
-          <li>no aplicativo ou site do TikTok, acesse as configurações de privacidade/segurança da sua conta e procure a área de aplicativos e serviços conectados (ou permissões de aplicativos); selecione o GTA VI Clip Factory e remova o acesso. O nome exato do menu pode variar conforme a versão do TikTok;</li>
+          <li><strong>no próprio Aplicativo:</strong> tela Publicação → <strong>Desconectar</strong> (TikTok ou YouTube). O acesso é revogado na plataforma e o token é apagado do seu PC;</li>
+          <li><strong>no Google/YouTube:</strong> em <a href="https://myaccount.google.com/permissions" rel="noopener">myaccount.google.com/permissions</a>, selecione o app e remova o acesso;</li>
+          <li><strong>no TikTok:</strong> no aplicativo ou site do TikTok, acesse as configurações de privacidade/segurança da sua conta e procure a área de aplicativos e serviços conectados (ou permissões de aplicativos); selecione o GTA VI Clip Factory e remova o acesso. O nome exato do menu pode variar conforme a versão do TikTok;</li>
           <li>depois de revogado, o Aplicativo não conseguirá mais publicar na sua conta até que você autorize novamente.</li>
         </ul>
-        <p>Revogar o acesso não apaga conteúdos já publicados no TikTok nem arquivos salvos no seu computador.</p>
+        <p>Revogar o acesso não apaga conteúdos já publicados no TikTok ou no YouTube nem arquivos salvos no seu computador.</p>
 
         <h2 id="direitos"><span class="n">13</span>Seus direitos</h2>
         <p>Nos termos do art. 18 da LGPD, você pode solicitar:</p>
@@ -370,7 +400,7 @@
         <p>O GitHub, como provedor de hospedagem, pode registrar dados técnicos de acesso conforme sua própria política.</p>
 
         <h2 id="alteracoes"><span class="n">16</span>Alterações desta política</h2>
-        <p>Esta Política poderá ser atualizada para refletir mudanças no Aplicativo, na integração com o TikTok ou na legislação. A versão vigente estará sempre nesta página, com a data da última atualização. Mudanças relevantes, como qualquer nova coleta de dados, serão destacadas aqui antes de entrarem em vigor.</p>
+        <p>Esta Política poderá ser atualizada para refletir mudanças no Aplicativo, nas integrações com o TikTok e o YouTube ou na legislação. A versão vigente estará sempre nesta página, com a data da última atualização. Mudanças relevantes, como qualquer nova coleta de dados, serão destacadas aqui antes de entrarem em vigor.</p>
 
         <h2 id="contato"><span class="n">17</span>Contato para privacidade</h2>
         <p>Para dúvidas, solicitações de privacidade ou exercício de direitos:</p>
@@ -394,7 +424,7 @@
         <li><a href="privacy.html" aria-current="page">Política de Privacidade</a></li>
         <li><a href="mailto:bxdrenan98@gmail.com">bxdrenan98@gmail.com</a></li>
       </ul>
-      <p class="disclaimer">© <span data-year>2026</span> GTA VI Clip Factory. Projeto independente. Grand Theft Auto, GTA e marcas relacionadas pertencem aos seus respectivos titulares (Rockstar Games / Take-Two Interactive). TikTok é marca da ByteDance Ltd. Este projeto não é afiliado, patrocinado, endossado ou aprovado pela Rockstar Games, Take-Two Interactive, TikTok ou ByteDance.</p>
+      <p class="disclaimer">© <span data-year>2026</span> GTA VI Clip Factory. Projeto independente. Grand Theft Auto, GTA e marcas relacionadas pertencem aos seus respectivos titulares (Rockstar Games / Take-Two Interactive). TikTok é marca da ByteDance Ltd. YouTube é marca do Google LLC. Este projeto não é afiliado, patrocinado, endossado ou aprovado pela Rockstar Games, Take-Two Interactive, TikTok, ByteDance, YouTube ou Google.</p>
     </div>
   </footer>
 
